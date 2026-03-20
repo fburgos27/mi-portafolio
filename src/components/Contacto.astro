@@ -1,0 +1,43 @@
+---
+import { Mail, Linkedin, ArrowUpRight } from '@lucide/astro';
+---
+
+<section class="contacto" id="contacto">
+    <div class="sobre-etiqueta">
+        <span>04</span>
+        <p>Contacto</p>
+    </div>
+
+    <div class="contacto-contenido">
+        <h2>¿Tienes un proyecto en mente?<br><span>Construyamos algo juntos.</span></h2>
+        
+        <p class="contacto-desc">
+            Abierto a colaborar en desafíos de <strong>IA, Automatización y Estrategia de Datos</strong>. 
+            Si buscas optimizar procesos institucionales, hablemos.
+        </p>
+
+        <div class="contacto-links">
+            <a href="mailto:fburgo27@gmail.com" class="contacto-card">
+                <div class="icon-box">
+                    <Mail size={24} />
+                </div>
+                <div class="contacto-info">
+                    <span>Escríbeme</span>
+                    <p>fburgos27@gmail.com</p>
+                </div>
+                <ArrowUpRight size={20} class="contacto-arrow" />
+            </a>
+
+            <a href="https://linkedin.com/in/fabianburgos33" target="_blank" rel="noopener noreferrer" class="contacto-card">
+                <div class="icon-box">
+                    <Linkedin size={24} />
+                </div>
+                <div class="contacto-info">
+                    <span>LinkedIn</span>
+                    <p>Fabián Burgos</p>
+                </div>
+                <ArrowUpRight size={20} class="contacto-arrow" />
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,725 @@
+/* FUENTES — las traemos de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+/* VARIABLES — los colores y fuentes del sitio */
+:root {
+    --bg:        #0a0a0a;
+    --bg-soft:   #111111;
+    --linea:     #1f1f1f;
+    --texto:     #e8e8e8;
+    --texto-soft:#888888;
+    --verde:     #2dd4a0;
+    --verde-soft:#1a3d32;
+    --blanco:    #ffffff;
+}
+
+/* RESET — borramos estilos por defecto del navegador */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--texto);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8rem;
+    padding-top: 6rem; 
+    max-width: 900px;
+}
+
+.hero-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--verde);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.hero-nombre {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 600;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-nombre span {
+    color: var(--verde);
+}
+
+.hero-sub {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--texto-soft);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-primario {
+    background: var(--verde);
+    color: var(--bg);
+    padding: 0.9rem 2rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.2s;
+}
+.btn-primario:hover {
+    opacity: 0.85;
+}
+
+.btn-secundario {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--texto-soft);
+    text-decoration: none;
+    border-bottom: 1px solid var(--linea);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+}
+.btn-secundario:hover {
+    color: var(--verde);
+    border-color: var(--verde);
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8rem;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--linea);
+}
+
+.nav-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--verde);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--texto-soft);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--verde);
+}
+
+/* SOBRE MÍ */
+.sobre-mi {
+    padding: 8rem;
+    border-top: 1px solid var(--linea);
+}
+
+.sobre-etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 3.5rem;
+}
+
+.sobre-etiqueta span {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--verde);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.sobre-etiqueta p {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--texto-soft);
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.sobre-contenido {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.sobre-texto h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+
+.sobre-texto h2 span {
+    color: var(--verde);
+}
+
+.sobre-texto p {
+    font-size: 1.1rem;
+    color: var(--texto-soft);
+    line-height: 1.9;
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+}
+
+/* LATERAL */
+.lateral-titulo {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    color: var(--verde);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.chip {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--linea);
+    color: var(--texto-soft);
+    transition: all 0.2s;
+    cursor: default;
+    margin-bottom: 0.3rem;
+}
+
+.chip:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+.chip.activo {
+    border-color: var(--verde-soft);
+    color: var(--verde);
+    background: var(--verde-soft);
+}
+
+.idiomas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.idioma-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.idioma-codigo {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--verde);
+    width: 2.5rem;
+}
+
+.idioma-nivel {
+    font-size: 1.05rem;
+    color: var(--texto-soft);
+    font-weight: 300;
+}
+
+/* PROYECTOS - Corregido */
+.proyectos {
+    padding: 8rem; /* Esto debe ser igual al padding del Hero para alinear */
+    width: 100%;   /* Que use todo el ancho disponible */
+    max-width: 100%; /* Eliminamos el límite de 1200px o 1400px */
+    margin: 0;     /* Aseguramos que no se centre */
+    background-color: transparent; 
+}
+
+.proyectos-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    gap: 1rem;
+}
+
+.proyectos-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.proyectos-header h2 span {
+    color: var(--verde);
+}
+
+.proyectos-nota {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--texto-soft);
+    max-width: 450px;
+    text-align: left;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+.proyectos-grid {
+    display: grid;
+    /* Bajamos el mínimo de 320px a 280px para que quepan más en una fila */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 1.5rem;
+    margin-top: 3rem;
+    background-color: transparent; 
+}
+
+.proj-card {
+    background: var(--bg); /* Antes estaba como --verde, corregido a fondo oscuro */
+    border: 1px solid var(--linea);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.proj-card:hover {
+    border-color: var(--verde);
+    background: var(--bg-soft);
+    transform: translateY(-2px);
+}
+
+.proj-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.proj-numero {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem; /* Ajustado para que resalte un poco más */
+    color: var(--verde); /* Los números en verde se ven mucho mejor */
+    letter-spacing: 0.2em;
+}
+
+.proj-tipo {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: var(--texto-soft);
+    text-transform: uppercase;
+}
+
+.proj-nombre {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.proj-desc {
+    font-size: 1rem;
+    color: var(--texto-soft);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.ptag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    padding: 0.3rem 0.7rem;
+    background: transparent;
+    border: 1px solid var(--linea);
+    color: var(--texto-soft);
+    transition: all 0.2s;
+}
+
+.ptag:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+.proj-estado {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--verde);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: auto;
+}
+
+/* El punto parpadeante usando el pseudo-elemento */
+.proj-estado::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--verde);
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+.proj-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--verde);
+    text-decoration: none;
+    border-bottom: 1px solid var(--verde-soft);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+}
+
+.proj-link:hover {
+    border-color: var(--verde);
+}
+
+/* TRAYECTORIA */
+.trayectoria {
+    padding: 8rem;
+    border-top: 1px solid var(--linea);
+}
+
+.trayectoria-contenido {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 6rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.trayectoria-izq h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.trayectoria-izq h2 span {
+    color: var(--verde);
+}
+
+.tray-sub {
+    font-size: 0.9rem;
+    color: var(--texto-soft);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    max-width: 480px;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1px;
+    background: var(--linea);
+}
+
+.tl-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.tl-item::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0.4rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--verde);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--verde);
+}
+
+.tl-fecha {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--verde);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.tl-rol {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--texto);
+    margin-bottom: 0.2rem;
+}
+
+.tl-lugar {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    color: var(--texto-soft);
+    margin-bottom: 0.5rem;
+}
+
+.tl-desc {
+    font-size: 0.95rem;
+    color: var(--texto-soft);
+    line-height: 1.65;
+    font-weight: 300;
+}
+
+/* CERTIFICACIONES */
+.cert-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--linea);
+}
+
+.cert-item {
+    background: var(--bg);
+    padding: 1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: background 0.2s;
+}
+
+.cert-item:hover {
+    background: var(--bg-soft);
+}
+
+.cert-org {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
+.cert-nombre {
+    font-size: 0.95rem;
+    color: var(--texto-soft);
+    line-height: 1.5;
+}
+
+/* CONTACTO */
+.contacto {
+    padding: 8rem;
+    border-top: 1px solid var(--linea);
+}
+
+.contacto-contenido {
+    max-width: 800px;
+}
+
+.contacto-contenido h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+
+.contacto-contenido h2 span {
+    color: var(--verde);
+}
+
+.contacto-desc {
+    font-size: 1.2rem;
+    color: var(--texto-soft);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    max-width: 600px;
+}
+
+.contacto-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.contacto-card {
+    background: var(--bg);
+    border: 1px solid var(--linea);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contacto-card:hover {
+    border-color: var(--verde);
+    background: var(--bg-soft);
+}
+
+.icon-box {
+    color: var(--verde);
+    background: var(--verde-soft);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto-info span {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--texto-soft);
+    margin-bottom: 0.5rem;
+}
+
+.contacto-info p {
+    color: var(--texto);
+    font-weight: 500;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.contacto-arrow {
+    margin-left: auto;
+    color: var(--linea);
+    transition: all 0.3s ease;
+}
+
+.contacto-card:hover .contacto-arrow {
+    color: var(--verde);
+    transform: translate(3px, -3px);
+}
+
+/* FOOTER - Agrégalo a tu global.css */
+.footer {
+    padding: 6rem 8rem 4rem 8rem; /* Mucho aire arriba para que no se pegue al contacto */
+    background-color: var(--bg);
+}
+
+.footer-linea {
+    width: 100%;
+    height: 1px;
+    background: var(--linea);
+    margin-bottom: 2rem;
+    opacity: 0.5;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contenido p {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--texto-soft);
+    letter-spacing: 0.05em;
+}
+
+.footer-tech {
+    font-size: 0.75rem !important;
+    opacity: 0.4;
+    text-transform: uppercase;
+}
+
+/* Ajuste Responsive para el Footer */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 4rem 2rem;
+    }
+    .footer-contenido {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .hero, .navbar, .sobre-mi, .proyectos, .trayectoria, .contacto {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .sobre-contenido, .trayectoria-contenido {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

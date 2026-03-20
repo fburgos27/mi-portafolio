@@ -1,0 +1,118 @@
+---
+const proyectos = [
+  {
+    numero: "01",
+    tipo: "IA · RAG · Chatbot",
+    nombre: "Buscador Inteligente de Investigaciones",
+    descripcion: "Chatbot con RAG para investigadores del Mineduc. Scrapeo con BeautifulSoup, procesamiento de PDFs/Word y base estructurada. Usa Gemini API con fallback a Hugging Face para consultas en lenguaje natural.",
+    tags: ["RAG", "Gemini API", "BeautifulSoup", "Python", "Prompt Engineering"],
+    estado: "Prototipo — Modelo deprecado",
+    link: null // Eliminamos el link aquí
+  },
+  {
+    numero: "02",
+    tipo: "Automatización · n8n",
+    nombre: "Suite de Automatización de Flujos",
+    descripcion: "Flujos de trabajo en n8n para optimizar procesos institucionales. Automatización de reportes, notificaciones e integraciones de sistemas para eliminar cuellos de botella manuales.",
+    tags: ["n8n", "Automatización", "APIs", "Integraciones"],
+    estado: "En desarrollo - Operacional",
+    link: null
+  },
+  {
+    numero: "03",
+    tipo: "Analítica · Reportería",
+    nombre: "Herramientas de Datos a Medida",
+    descripcion: "Desarrollo de scripts en Python y dashboards en Power BI para Duoc UC y Mineduc. Transformación de datos institucionales complejos en visualizaciones accionables.",
+    tags: ["Python", "Power BI", "SQL", "Pandas"],
+    estado: "Operacional",
+    link: null
+  },
+  {
+    numero: "04",
+    tipo: "Automatización · Python",
+    nombre: "Generador Automático de Minutas",
+    descripcion: "Script que automatiza la creación de minutas en Word combinando plantillas base con datos de Excel. Implementado en Mineduc para eliminar la redacción manual de documentos repetitivos.",
+    tags: ["Python", "python-docx", "Excel", "Automation"],
+    estado: "Finalizado",
+    link: null
+  },
+  {
+    numero: "05",
+    tipo: "IA · Infraestructura Local",
+    nombre: "Implementación de LLMs Privados",
+    descripcion: "Configuración y optimización de modelos locales (Llama 3, Mistral) vía Ollama y LM Studio. Foco en privacidad de datos institucionales y gestión de recursos de hardware local.",
+    tags: ["Ollama", "Local AI", "Llama 3", "Privacidad de Datos"],
+    estado: "Operacional — Uso Local",
+    link: null
+  },
+  {
+    numero: "06",
+    tipo: "Desarrollo Web · React",
+    nombre: "Sistema de Finanzas Familiares",
+    descripcion: "Aplicación reactiva para gestión de presupuestos. Incluye algoritmos de partición de gastos (Cuentas Claras), persistencia en LocalStorage y módulo de gestión de salud.",
+    tags: ["React", "Tailwind CSS", "LocalStorage", "State Management"],
+    estado: "Prototipo Funcional",
+    link: null
+  }
+];
+---
+
+<section class="proyectos" id="proyectos">
+    <div class="sobre-etiqueta">
+        <span>02</span>
+        <p>Proyectos</p>
+    </div>
+
+    <div class="proyectos-header">
+        <h2>Cosas que he<br><span>construido de verdad.</span></h2>
+        <p class="proyectos-nota">Soluciones técnicas para problemas reales — desde IA local hasta automatización de procesos.</p>
+    </div>
+
+    <div class="proyectos-grid">
+        {proyectos.map((p) => (
+            <div class="proj-card">
+                <div class="proj-top">
+                    <span class="proj-numero">{p.numero}</span>
+                    <span class="proj-tipo">{p.tipo}</span>
+                </div>
+                <h3 class="proj-nombre">{p.nombre}</h3>
+                <p class="proj-desc">{p.descripcion}</p>
+                
+                <div class="proj-tags">
+                    {p.tags.map((tag) => (
+                        <span class="ptag">{tag}</span>
+                    ))}
+                </div>
+                <div class="proj-footer">
+                    {p.estado && (
+                        <p class="proj-estado">
+                            <span></span> {p.estado}
+                        </p>
+                    )}
+                    {p.link && (
+                        <a href={p.link} target="_blank" rel="noopener noreferrer" class="proj-link">
+                            Ver proyecto →
+                        </a>
+                    )}
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    /* ... (tus estilos anteriores) ... */
+    
+    .proj-estado {
+        font-size: 0.8rem;
+        color: #888;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .proj-estado span {
+        color: #4f46e5; /* Punto de color para que se vea activo */
+        font-size: 0.6rem;
+    }
+</style>

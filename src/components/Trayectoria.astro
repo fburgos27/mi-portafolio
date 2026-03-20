@@ -1,0 +1,83 @@
+---
+const experiencia = [
+    {
+        fecha: "2025 - Actualidad",
+        rol: "Analista en Analítica Institucional",
+        lugar: "DUOC UC",
+        desc: "Análisis de datos, automatización de reportes y desarrollo de herramientas con IA para decisiones institucionales a escala."
+    },
+    {
+        fecha: "2024",
+        rol: "Profesional Unidad de Ciencia de Datos",
+        lugar: "Mineduc — Centro de Estudios",
+        desc: "Análisis y reportería en la infraestructura nacional de datos educativos. Primera exposición a datos institucionales a gran escala."
+    },
+    {
+        fecha: "2023",
+        rol: "Analista de Regularización en Innovación y Emprendimiento",
+        lugar: "DUOC UC",
+        desc: "Construí herramientas en Python y dashboards Power BI para seguimiento de métricas de innovación y desempeño de programas."
+    },
+
+    {
+        fecha: "Formación",
+        rol: "Ing. Comercial, Mención Economía + Magíster en Estudios Coreanos",
+        lugar: "U. de Talca + U. Central",
+        desc: "Bases analíticas combinadas con pensamiento intercultural — ventaja en contextos organizacionales diversos e internacionales."
+    }
+]
+
+const certificaciones = [
+    { org: "PUC", nombre: "Diplomado Ciencia de Datos para la Gestión" },
+    { org: "UBA", nombre: "Diplomatura IA Aplicada a Entornos de Gestión" },
+    { org: "n8n", nombre: "Cursos Oficiales niveles 1 y 2" },
+    { org: "Make", nombre: "Make Foundation" },
+    { org: "Google", nombre: "Certificado Profesional de Análisis de Datos" },
+    { org: "LinkedIn - Microsoft", nombre: "Itinerario de Aprendizaje: Fundamentos profesionales de IA generativa" },
+    { org: "LinkedIn", nombre: "Itinerario de Aprendizaje: Fundamentos y Habilidades de la Inteligencia Artificial Generativa" },
+    { org: "LinkedIn - Xavier Amatriain", nombre: "Ingeniería de Prompts: Cómo Hablar con las IAs" },
+    { org: "Escuela de Postgrado y Educación Continua FCFM Universiodad de Chile", nombre: "Ciencia de Datos - Power BI - Business Analytics Essentials - Machine Learning with Python Essentials" },
+    { org: "Korea Advanced Institute of Science ans Technology (KAIST)", nombre: "Practical Python for AI Coding 1" },
+]
+---
+
+<section class="trayectoria" id="trayectoria">
+
+    <div class="sobre-etiqueta">
+        <span>03</span>
+        <p>Trayectoria</p>
+    </div>
+
+    <div class="trayectoria-contenido">
+
+        <div class="trayectoria-izq">
+            <h2>Del análisis<br>al <span>desarrollo.</span></h2>
+            <p class="tray-sub">~3 años conectando datos, contextos institucionales y herramientas de IA en las principales instituciones educativas de Chile.</p>
+
+            <div class="timeline">
+                {experiencia.map((e) => (
+                    <div class="tl-item">
+                        <span class="tl-fecha">{e.fecha}</span>
+                        <p class="tl-rol">{e.rol}</p>
+                        <p class="tl-lugar">{e.lugar}</p>
+                        <p class="tl-desc">{e.desc}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div class="trayectoria-der">
+            <p class="lateral-titulo">Certificaciones</p>
+            <div class="cert-lista">
+                {certificaciones.map((c) => (
+                    <div class="cert-item">
+                        <span class="cert-org">{c.org}</span>
+                        <span class="cert-nombre">{c.nombre}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+    </div>
+
+</section>
